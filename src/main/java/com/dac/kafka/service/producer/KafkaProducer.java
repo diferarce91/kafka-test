@@ -4,13 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import com.dac.kafka.model.IPublishable;
+
 @Service
-public class KafkaProducer {
+public class KafkaProducer{
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, IPublishable> kafkaTemplate;
 
-    public void sendMessage(String message) {
-        this.kafkaTemplate.send("ventastopic", message);
+    public void sendMessage(String topic, IPublishable data) {
+        this.kafkaTemplate.send(topic, data);
     }
 }

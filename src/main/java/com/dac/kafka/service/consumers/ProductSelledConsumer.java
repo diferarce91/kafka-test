@@ -3,12 +3,13 @@ package com.dac.kafka.service.consumers;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.KafkaListener;
 
-@Configuration
-public class KafkaConsumer {
+import com.dac.kafka.model.IReadable;
 
+@Configuration
+public class ProductSelledConsumer {
 
     @KafkaListener(topics = "ventastopic")
-    public void listen(String message) {
+    public void listen(IReadable message) {
         System.out.println("Mensaje recibido: " + message);
     }
 

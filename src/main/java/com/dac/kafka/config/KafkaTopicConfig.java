@@ -10,7 +10,6 @@ public class KafkaTopicConfig {
     public NewTopic topic() {
         return TopicBuilder.name("ventastopic")
                 .partitions(2)
-                .replicas(4)
                 .build();
     }
 }
