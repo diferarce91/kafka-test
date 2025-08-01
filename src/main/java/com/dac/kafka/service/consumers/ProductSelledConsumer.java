@@ -8,7 +8,7 @@ import com.dac.kafka.model.IReadable;
 @Configuration
 public class ProductSelledConsumer {
 
-    @KafkaListener(topics = "ventastopic")
+    //@KafkaListener(topics = "ventastopic")
     public void listen(IReadable message) {
         System.out.println("Mensaje recibido: " + message);
     }
