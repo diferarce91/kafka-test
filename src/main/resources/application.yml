@@ -19,3 +19,9 @@ spring:
         resourceserver:
           jwt:
             issuer-uri: https://cognito-idp.us-east-2.amazonaws.com/us-east-2_I2ljKXMXt
+aws:
+  region: us-east-2
+  sns:
+    topic:
+      arn-mail: arn:aws:sns:us-east-2:205709488040:SNS-Notification-test
+      arn-sms: arn:aws:sns:us-east-2:205709488040:SNS-Notification-test
