@@ -1,4 +1,4 @@
-package com.dac.kafka.service.producer;
+package com.dac.kafka.service.kafka.producer;
 
 import org.springframework.stereotype.Service;
 
